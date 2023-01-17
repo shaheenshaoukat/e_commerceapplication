@@ -11,6 +11,7 @@
         android:layout_height="54dp"
         android:background="@color/purple_700"
         android:padding="8dp"
+        android:layout_marginTop="20dp"
         android:scaleType="centerCrop"
         android:src="@drawable/placeholder"
         app:layout_constraintEnd_toEndOf="parent"
