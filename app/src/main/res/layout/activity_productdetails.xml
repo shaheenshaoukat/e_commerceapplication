@@ -4,42 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.DetailsActivity">
+    tools:context=".activities.Productdetails">
 
     <ImageView
         android:id="@+id/productImage"
         android:layout_width="0dp"
         android:layout_height="250dp"
-        android:layout_margin="8dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/placeholder"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/placeholder" />
 
     <TextView
         android:id="@+id/productDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Hello world"
-        android:textSize="20dp"
+        android:text="Loading details..."
         app:layout_constraintEnd_toEndOf="@+id/productImage"
         app:layout_constraintStart_toStartOf="@+id/productImage"
         app:layout_constraintTop_toBottomOf="@+id/productImage" />
 
     <Button
-        android:id="@+id/addToCart"
+        android:id="@+id/addToCartBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Add To Cart"
+        android:background="@color/orange"
+        android:text="Add to Cart"
+        android:layout_margin="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="DuplicateIds" />
-
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

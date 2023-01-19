@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.e_commerce"
-        minSdk 21
+        minSdk 23
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -66,4 +66,14 @@ dependencies {
     implementation 'me.relex:circleindicator:2.1.6'
     implementation 'org.imaginativeworld.whynotimagecarousel:whynotimagecarousel:2.1.0'
     /*image slider library end */
+
+    /*volley library start */
+    implementation 'com.android.volley:volley:1.2.1'
+    /*volley library end */
+
+     /*tintcart library start */
+    implementation 'com.github.hishd:TinyCart:1.0.1'
+    /*tinycart library end */
+
+
 }
