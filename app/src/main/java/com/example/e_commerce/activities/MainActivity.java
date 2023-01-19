@@ -3,6 +3,7 @@ package com.example.e_commerce.activities;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.GridLayout;
@@ -14,12 +15,14 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.e_commerce.R;
+import com.example.e_commerce.Search;
 import com.example.e_commerce.adapters.CategoryAdapter;
 import com.example.e_commerce.adapters.ProductAdapter;
 import com.example.e_commerce.databinding.ActivityMainBinding;
 import com.example.e_commerce.model.Category;
 import com.example.e_commerce.model.Product;
 import com.example.e_commerce.utils.Constants;
+import com.mancj.materialsearchbar.MaterialSearchBar;
 
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem;
 import org.json.JSONArray;
@@ -47,6 +50,26 @@ public class MainActivity extends AppCompatActivity {
         initCategories();
         initProduct();
         getRecentOffer();
+
+        binding.searchBar.setOnSearchActionListener(new MaterialSearchBar.OnSearchActionListener() {
+            @Override
+            public void onSearchStateChanged(boolean enabled) {
+
+            }
+
+            @Override
+            public void onSearchConfirmed(CharSequence text) {
+                String query=text.toString();
+                Intent intent=new Intent(MainActivity.this, Search.class);
+                intent.putExtra("query",query);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onButtonClicked(int buttonCode) {
+
+            }
+        });
 
 
 
